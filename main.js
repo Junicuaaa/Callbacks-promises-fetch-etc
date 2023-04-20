@@ -1,7 +1,6 @@
 import api from "./api.js"
 
-api.pene("raichu");
-
+api.showData();
 
 
 
