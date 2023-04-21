@@ -3,6 +3,7 @@ let ws = {
         try {
             const url = await fetch(p1);
             const data = await url.json();
+            return data
         } catch (error) {
             console.log("el error fue", error);
         }
@@ -10,5 +11,6 @@ let ws = {
 }
 
 self.addEventListener("message", async (e)=>{
-    let waitCall = await ws.showData("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=1281");
+    let waitCall = await ws.showData(e.data);
+    postMessage(waitCall)
 })
