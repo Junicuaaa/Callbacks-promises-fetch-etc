@@ -1,7 +1,6 @@
-import api from "./api.js"
+import x from "./services/getPokemon.js"
 
-api.showData();
-
+x.getData();
 
 
 //CALLBACKS//
